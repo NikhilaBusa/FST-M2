@@ -1,0 +1,16 @@
+# Use an existing docker image as a base
+FROM node:16-alpine
+ 
+# Create a Work Directory
+WORKDIR /usr/app
+
+# copy files into container
+COPY ./package.json ./
+
+# install dependencies
+RUN npm install
+
+COPY .  .
+
+# start NodeJS app
+CMD ["npm", "run", "serve"]
