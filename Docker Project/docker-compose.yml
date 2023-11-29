@@ -6,7 +6,7 @@ services:
       build: 
         context: ./
         dockerfile: Dockerfile
-      image: nikki_mn/simple_blog
+      image: nikkimn/simple_blog
       ports:
           - "3000:3000"
       environment:
